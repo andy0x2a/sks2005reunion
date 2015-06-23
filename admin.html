@@ -254,10 +254,10 @@
 
 
                         <div class="col-sm-9 myInput">
-                            <label for="partySize">Party Size:</label>
+                            <label for="partySize">Bringing Guest:</label>
                             <input id="partySize" class="Input" type="text" name="partySize" autocorrect="off"
                                    autocapitalize="off"
-                                   placeholder="1" />
+                                   placeholder="false" />
                         </div>
 
 
@@ -267,26 +267,29 @@
                         <div class="col-sm-9 myInput error">
                             <h2> Please fill out the entire form</h2>
                         </div>
+                        <br />
+                        <div class="col-lg-12 col-sm-12">
+                            <!--<div clas="col-sm-6">-->
 
-                        <div clas="col-sm-10">
+                                <div class="col-sm-3 myInput adminButton">
+                                    <a href="#" class="button btn btn-default" id="submitEdit">
+                                        <span>Submit Edit</span>
+                                    </a>
+                                </div>
 
-                            <div class="col-sm-3 myInput adminButton">
-                                <a href="#" class="button btn btn-default" id="submitEdit">
-                                    <span>Submit Edit</span>
-                                </a>
-                            </div>
-
-                            <div class="col-sm-3 myInput adminButton">
-                                <a href="#" class="button btn btn-default" id="editDelete">
-                                    <span>Delete Guest</span>
-                                </a>
-                            </div>
-                            <div class="col-sm-3 myInput adminButton">
-                                <a href="#" class="button btn btn-default" id="editCancel">
-                                    <span>Cancel</span>
-                                </a>
-                            </div>
+                                <div class="col-sm-3 myInput adminButton">
+                                    <a href="#" class="button btn btn-default" id="editDelete">
+                                        <span>Delete Guest</span>
+                                    </a>
+                                </div>
+                                <div class="col-sm-3 myInput adminButton">
+                                    <a href="#" class="button btn btn-default" id="editCancel">
+                                        <span>Cancel</span>
+                                    </a>
+                                </div>
+                            <!--</div>-->
                         </div>
+                        
                     </form>
 
                 </div>
@@ -295,12 +298,17 @@
 
         </div>
 
-  
+        
+
     </div>
-    <footer>
-        <p>&copy; 2015 - Andy Newman</p>
-    </footer>
-   
+    <div class="container body-content">
+        <hr />
+        <footer>
+            <p>&copy; 2015 - Andy Newman</p>
+        </footer>
+
+    </div>
+    
 
     <script src="js/rest.js"></script>
     <script src="js/admin/dashboard.js"></script>

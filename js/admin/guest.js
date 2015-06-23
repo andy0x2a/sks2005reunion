@@ -69,9 +69,9 @@ var submitEditedGuest = function () {
     //var address = $('#address').val().trim();
     var address = null;
     //var menu = $('#menuSel option:selected').attr('id');
-    var menu = null;
+    var menu = 5;
     var partySize = $("#partySize ").val().trim();
-    var notes = $("#notes").val().trim();
+   // var notes = $("#notes").val().trim();
     //var notes = null;
     //var association =$('#association option:selected').attr('val').toLowerCase();
     var association = null;
@@ -87,8 +87,8 @@ var submitEditedGuest = function () {
         'phoneNumber': contact,
         'address': address,
         'statusId': attending ? '1' : '0',
-        'mealId': menu,
-        'notes': notes,
+        'mealId': 5,
+        'notes': null,
         'association': association,
         'partySize' : partySize,
         'id': id
@@ -170,9 +170,9 @@ var submitDeleteGuest = function () {
     isValid = true;
     if (isValid) {
         console.log('deleting ' + id);
-        var url = serverURL + "guests/" + id;
+        var url = serverURL + "admin/guests/" + id;
 
-        callAjax(url, verb, null, onComplete, onError);
+        adminCallAjax(url, verb, null, onComplete, onError);
         ////console.log('DELETING guest ' + id);
         //onComplete();
     } else {
@@ -223,7 +223,7 @@ var showDataFor = function (id) {
 
         //$('#menuSel').val(foundElem.mealId);
         $('#partySize').val(foundElem.partySize);
-        $('#notes').val(foundElem.notes);
+      // $('#notes').val(foundElem.notes);
 
     }
 };
