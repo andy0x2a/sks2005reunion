@@ -44,14 +44,15 @@
             <h1>RSVP</h1>
 
         </div>
-        <div id="thanks" class="jumbotron centred hidden">
-            <span>Your RSVP Has been Received, Thank you.</span>
+        <div id="thanks" class="jumbotron centred ">
+            
             <br />
             <span>Please purchase your ticket to the Reunion here:</span>
+            <p/>
             <br />
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="Skssgrad05@gmail.com">
+            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <!--<input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="skssgrad05-seller@gmail.com">
                 <input type="hidden" name="lc" value="CA">
                 <input type="hidden" name="item_name" value="Event Ticket For Grad Reunion">
                 <input type="hidden" name="item_number" value="001">
@@ -62,11 +63,85 @@
                 <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
                 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
+            </form>-->
+                <!--<form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                    <input type="hidden" name="cmd" value="_cart">
+                    <input type="hidden" name="business" value="Skssgrad05-seller@gmail.com">
+                    <input type="hidden" name="lc" value="CA">
+                    <input type="hidden" name="item_name" value="Event Ticket For Grad Reunion">
+                    <input type="hidden" name="item_number" value="004">
+                    <input type="hidden" name="button_subtype" value="products">
+                    <input type="hidden" name="no_note" value="0">
+                    <input type="hidden" name="currency_code" value="CAD">
+                    <input type="hidden" name="add" value="1">
+                    <input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
+                    <table>
+                        <tr><td><input type="hidden" name="on0" value="Number of Tickets">Number of Tickets</td></tr>
+                        <tr>
+                            <td>
+                                <select name="os0">
+                                    <option value="One">1 ($30.00 CAD)</option>
+                                    <option value="Two">2 ($60.00 CAD)</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="hidden" name="currency_code" value="CAD">
+                    <input type="hidden" name="quantity" value="3">
+                    <input type="hidden" name="option_select0" value="One">
+                    <input type="hidden" name="option_amount0" value="30.00">
+                    <input type="hidden" name="option_select1" value="Two">
+                    <input type="hidden" name="option_amount1" value="60.00">
+                    <input type="hidden" name="option_index" value="0">
+                    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>-->
+
+
+                <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                    <input type="hidden" name="cmd" value="_cart">
+                    <input type="hidden" name="business" value="Skssgrad05-seller@gmail.com">
+                    <input type="hidden" name="lc" value="CA">
+                    <input type="hidden" name="item_name" value="Event Ticket For Grad Reunion">
+                    <input type="hidden" name="item_number" value="005">
+                    <input type="hidden" name="amount" value="30.00">
+                    <input type="hidden" name="currency_code" value="CAD">
+                    <input type="hidden" name="button_subtype" value="products">
+                    <input type="hidden" name="no_note" value="0">
+                    <input type="hidden" name="add" value="1">
+                    <input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
+                    <table>
+                        <tr><td><input type="hidden" name="on0" value="Number of Tickets">Number of Tickets</td></tr>
+                        <tr>
+                            <td>
+                                <select name="numTickets" id="selNumTickets">
+                                    <option value="1">1 ($30.00 CAD)</option>
+                                    <option value="2">2 ($60.00 CAD)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr><td><input type="hidden" name="on0" value="Name of Guest">Name of Guest</td></tr>
+                        <tr><td><input type="text" name="os0" maxlength="200"></td></tr>
+                    </table>
+                    <input type="hidden" name="quantity" value="1">
+                    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+
 
         </div>
+        <script>
+            $(document).ready(function () {
+
+
+                $('#selNumTickets').on('change', function () {
+                    $("input[name='quantity']").val($('#selNumTickets option:selected').val());
+                });
+
+            });
+        </script>
         <hr />
-        <div>
+        <div class="hidden">;
             <form name="signup" method="post" action="/#" id="rsvp">
                 <div>
                     <div class="row" style="margin:10px">
@@ -272,8 +347,8 @@
             $('.error').hide();
             $('.error').removeClass('hidden');
 
-            $("#thanks").hide();
-            $('#thanks').removeClass('hidden');
+            //$("#thanks").hide();
+            //$('#thanks').removeClass('hidden');
             $('#returning').hide();
             $('#returning').removeClass('hidden');
 
@@ -356,6 +431,7 @@
             });
 
         });
+       
 
 
     </script>
