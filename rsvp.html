@@ -50,53 +50,7 @@
             <span>Please purchase your ticket to the Reunion here:</span>
             <p/>
             <br />
-            <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <!--<input type="hidden" name="cmd" value="_xclick">
-                <input type="hidden" name="business" value="skssgrad05-seller@gmail.com">
-                <input type="hidden" name="lc" value="CA">
-                <input type="hidden" name="item_name" value="Event Ticket For Grad Reunion">
-                <input type="hidden" name="item_number" value="001">
-                <input type="hidden" name="amount" value="30.00">
-                <input type="hidden" name="currency_code" value="CAD">
-                <input type="hidden" name="button_subtype" value="services">
-                <input type="hidden" name="no_note" value="0">
-                <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>-->
-                <!--<form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
-                    <input type="hidden" name="cmd" value="_cart">
-                    <input type="hidden" name="business" value="Skssgrad05-seller@gmail.com">
-                    <input type="hidden" name="lc" value="CA">
-                    <input type="hidden" name="item_name" value="Event Ticket For Grad Reunion">
-                    <input type="hidden" name="item_number" value="004">
-                    <input type="hidden" name="button_subtype" value="products">
-                    <input type="hidden" name="no_note" value="0">
-                    <input type="hidden" name="currency_code" value="CAD">
-                    <input type="hidden" name="add" value="1">
-                    <input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
-                    <table>
-                        <tr><td><input type="hidden" name="on0" value="Number of Tickets">Number of Tickets</td></tr>
-                        <tr>
-                            <td>
-                                <select name="os0">
-                                    <option value="One">1 ($30.00 CAD)</option>
-                                    <option value="Two">2 ($60.00 CAD)</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </table>
-                    <input type="hidden" name="currency_code" value="CAD">
-                    <input type="hidden" name="quantity" value="3">
-                    <input type="hidden" name="option_select0" value="One">
-                    <input type="hidden" name="option_amount0" value="30.00">
-                    <input type="hidden" name="option_select1" value="Two">
-                    <input type="hidden" name="option_amount1" value="60.00">
-                    <input type="hidden" name="option_index" value="0">
-                    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                </form>-->
-
+     
 
                 <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
                     <input type="hidden" name="cmd" value="_cart">
@@ -110,11 +64,11 @@
                     <input type="hidden" name="no_note" value="0">
                     <input type="hidden" name="add" value="1">
                     <input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
-                    <table>
+                    <table style="margin-bottom:10px;">
                         <tr><td><input type="hidden" name="on0" value="Number of Tickets">Number of Tickets</td></tr>
                         <tr>
                             <td>
-                                <select name="numTickets" id="selNumTickets">
+                                <select name="numTickets" id="selNumTickets" style="margin-bottom:10px">
                                     <option value="1">1 ($30.00 CAD)</option>
                                     <option value="2">2 ($60.00 CAD)</option>
                                 </select>
@@ -122,7 +76,7 @@
                         </tr>
                         <tr><td><input type="hidden" name="on0" value="Name of Guest">Name of Guest</td></tr>
                         <tr><td><input type="text" name="os0" maxlength="200"></td></tr>
-                    </table>
+                    </table >
                     <input type="hidden" name="quantity" value="1">
                     <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                     <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
@@ -140,301 +94,12 @@
 
             });
         </script>
-        <hr />
-        <div class="hidden">;
-            <form name="signup" method="post" action="/#" id="rsvp">
-                <div>
-                    <div class="row" style="margin:10px">
-                        <label class="col-lg-3 control-label" for="firstName">First Name:</label>
-                        <div class="col-lg-6">
-                            <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name" />
-                        </div>
-
-                    </div>
-
-                    <div class="row" style="margin:10px">
-                        <label class="col-lg-3 control-label" for="lastName">Last Name:</label>
-                        <div class="col-lg-6">
-                            <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name" />
-                        </div>
-
-                    </div>
-
-                    <div class="row" style="margin:10px">
-                        <label class="col-lg-3 control-label" for="contact">Phone #:</label>
-                        <div class="col-lg-6">
-                            <input type="text" name="contact" class="form-control" id="contact" placeholder="Phone #" />
-                        </div>
-
-                    </div>
-
-                    <div class="row" style="margin:10px">
-                        <label class="col-lg-3 control-label" for="email">Email:</label>
-                        <div class="col-lg-6">
-                            <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" />
-                        </div>
-
-                    </div>
-
-                    <div class="row" style="margin:10px">
-                        <label class="col-lg-3 control-label" for="attending">Attending:</label>
-                        <div class="col-lg-6">
-                            <select class="" id="attending">
-                                <option id="1">Yes</option>
-                                <option id="0">No</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row" style="margin:10px">
-                        <label class="col-lg-3 control-label" for="plusOne">Bringing Guest:</label>
-                        <div class="col-lg-6">
-                            <input type="checkbox" name="plusOne" id="plusOne" value="plusOne" />
-
-                        </div>
-
-                    </div>
-
-                    <br />
-                </div>
-                <div class="col-lg-3">
-                    <input type="submit" class="btn btn-primary" value="Submit" style="width:175px" id="submit" />
-                </div>
-
-            </form>
-
-            <br />
-            <hr />
-        </div>
         <footer>
             <p>&copy; 2015 - Andy Newman</p>
         </footer>
     </div>
-    <script src="/js/vendor/spin.js"></script>
-
-    <script src="/js/vendor/jquery.spin.js"></script>
-    <script src="/js/vendor/jquery.cookie.js"></script>
-    <script>
-        var FEATURE_COOKIE = 0;
-        var venueLocation = 'VAN';
-        var cookieLocation = "com.newmansoft.rsvp.client" + venueLocation;
-
-        //       var serverURL = "http://localhost:8080/";
-        //var serverURL = "http://andybackend-newmansoft.rhcloud.com/rsvp/";
-        var serverURL = "http://mattandjenn2015.ca/skss/";
-
-        var attendingStatus = true;
-        var association = 'none-selected';
-
-        var isEdit = false;
-        var id;
-        var plusOneId;
-
-
-        var LogError = function (title, object) {
-            var errorObj = {
-                'subject': title,
-                'body': JSON.stringify(object),
-                'address': 'andyandem2016+server@gmail.com'
-
-            };
-            $.ajax({
-                url: serverURL + "email/",
-                type: "POST",
-                data: JSON.stringify(errorObj),
-                dataType: "json",
-                contentType: 'application/json'
-
-            });
-        };
-
-        var showPlusOne = function () {
-            $('.plusOne').show();
-        };
-
-        var hidePlusOne = function () {
-            $('.plusOne').hide();
-        };
-
-        var processForm = function () {
-
-
-            $('.error').hide();
-
-            var firstName = $('#firstName').val().trim();
-            var lastName = $('#lastName').val().trim();
-            var email = $('#email').val().trim();
-            var contact = $('#contact').val().trim();
-            //        var address = $('#address').val().trim();
-            var address = null;
-            var attending = $('#attending option:selected').attr('id');
-            //        var menu = $('#menuSel option:selected').attr('id');
-            var menu = 5;
-            var partySize = ($('#plusOne').is(':checked'));
-
-
-            var isValid = true;
-
-            isValid = firstName && lastName && email;
-
-
-            var obj = {
-                'firstName': firstName,
-                'lastName': lastName,
-                'email': email,
-                'phoneNumber': contact,
-                'address': address,
-                'statusId': attending,
-                'mealId': menu,
-                'notes': venueLocation,
-                'association': null,
-                'partySize': partySize,
-
-            };
-
-            var onComplete = function (a, b, c) {
-                console.log('success');
-                
-                $.cookie(cookieLocation, a.id);
-                id = a.id;
-                $("#submit").addClass('disabled');
-                $('#rsvp').spin(false);
-                $('#rsvp').hide();
-                $('#returning').hide();
-                $('#thanks').show();
-
-            }
-
-            var onError = function (a, b, c) {
-                console.log('failed');
-                alert('Something went wrong, please try again or contact Matt at mattwallacedesigner@gmail.com')
-                LogError('submitting guest error, ' + b, obj);
-                $('#rsvp').spin(false);
-            }
-            if (isValid) {
-                console.log('submitting');
-                var verb = "POST";
-                var url = serverURL + "guest/";
-                if (isEdit) {
-                    obj.id = id;
-                    verb = "PUT";
-                    url = url + id;
-                    if (obj.plusOneInfo && plusOneId) {
-
-                        obj.plusOneInfo.id = plusOneId;
-                    }
-                }
-                $.ajax({
-                    url: url,
-                    type: verb,
-                    data: JSON.stringify(obj),
-                    dataType: "json",
-                    contentType: 'application/json',
-                    success: onComplete,
-                    error: onError
-                })
-            } else {
-                $('.error').show();
-                $('#rsvp').spin(false);
-            }
-            console.log(JSON.stringify(obj));
-
-
-        };
-
-        $(document).ready(function () {
-
-            $('.error').hide();
-            $('.error').removeClass('hidden');
-
-            //$("#thanks").hide();
-            //$('#thanks').removeClass('hidden');
-            $('#returning').hide();
-            $('#returning').removeClass('hidden');
-
-            hidePlusOne();
-
-            $('.main').removeClass('hidden');
-
-
-            if (FEATURE_COOKIE == 1) {
-                var result = $.cookie(cookieLocation);
-                if (result) {
-                    console.log('found  ' + result);
-                    $("#submit").addClass('disabled');
-                    $('#rsvp').hide();
-                    $('#returning').show();
-                    id = result;
-
-                }
-
-            }
-            
-
-
-
-            $("#submit").on('click', function (e) {
-                e.preventDefault();
-                $('#rsvp').spin();
-                processForm();
-            });
-
-
-            var getOnSuccess = function (data) {
-
-
-                console.log('need to fill out variables here');
-
-                $('#firstName').val(data.firstName);
-                $('#lastName').val(data.lastName);
-                $('#email').val(data.email);
-                $('#contact').val(data.phoneNumber);
-                $('#address').val(data.address);
-                if (data.statusId == 1) {
-                    //TODO set select
-                }
-
-
-                $('#partySize').val(data.partySize);
-
-
-                $("#submit").removeClass('disabled');
-                $('#rsvp').spin(false);
-
-            };
-
-            var getOnError = function (e) {
-
-                alert('something went wrong retrieving the RSVP info');
-                LogError('retrieving guest error', {});
-                $('#rsvp').spin(false);
-            };
-
-            $('#showEditBtn').on('click', function (e) {
-                //show form for edit
-                e.preventDefault();
-                $('#rsvp').show();
-                $('#rsvp').spin();
-
-                $.ajax({
-                    url: serverURL + "guest/" + id,
-                    type: "GET",
-                    dataType: "json",
-                    contentType: 'application/json',
-                    success: getOnSuccess,
-                    error: getOnError
-                });
-
-                $("#submit").text('Submit Changes');
-                isEdit = true;
-
-            });
-
-        });
-       
-
-
-    </script>
+ 
+   
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
