@@ -40,3 +40,23 @@ footer {
 .navbar {
     margin-bottom:15px;
 }
+.centred {
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.center-line{
+   text-align:center;
+ 
+}
+
+.left-line{
+   text-align:left;
+ 
+}
+@media (max-width: 600px) {
+    .inn {
+    max-width: 100px;
+    }
+}

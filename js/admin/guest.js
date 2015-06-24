@@ -20,15 +20,15 @@ var getListOnSuccess = function (data) {
 
             '<td>' + item.id + '</td>' +
             '<td>' + item.firstName + '</td>' +
-            '<td>' + item.lastName + '</td>' +
             '<td>' + item.phoneNumber + '</td>' +
             '<td>' + item.email + '</td>' +
-            '<td>' +itemStatus + '</td>' +
+            //'<td>' +itemStatus + '</td>' +
             //'<td>' + getMealName(item.mealId) + '</td>' +
             //'<td>' + item.address + '</td>' +
             //'<td>' + item.association + '</td>' +
-           // '<td>' + item.notes + '</td>' +
-            '<td>' + item.partySize + '</td>' +
+             '<td>' + item.partySize + '</td>' +
+             '<td>' + item.notes + '</td>' +
+           
             '<td> <a href="#" class="editIcon" id="edit_icon_' + item.id + '" ><img src="img/edit.png"/> </a></td>' +
             '</row>';
 
@@ -63,7 +63,7 @@ var submitEditedGuest = function () {
     $('.error').hide();
     var id = $('#id').val().trim();
     var firstName = $('#firstName').val().trim();
-    var lastName = $('#lastName').val().trim();
+    var lastName = null;
     var email = $('#email').val().trim();
     var contact = $('#contact').val().trim();
     //var address = $('#address').val().trim();
@@ -71,15 +71,12 @@ var submitEditedGuest = function () {
     //var menu = $('#menuSel option:selected').attr('id');
     var menu = 5;
     var partySize = $("#partySize ").val().trim();
-   // var notes = $("#notes").val().trim();
+   var notes = $("#notes").val().trim();
     //var notes = null;
     //var association =$('#association option:selected').attr('val').toLowerCase();
     var association = null;
-    var attending = true;
-    if  ($('#attendings option:selected').attr('id').toLowerCase() == 'no') {
-        attending = false;
-    }
-
+    var attending = null;
+  
     var obj = {
         'firstName': firstName,
         'lastName': lastName,
@@ -88,7 +85,7 @@ var submitEditedGuest = function () {
         'address': address,
         'statusId': attending ? '1' : '0',
         'mealId': 5,
-        'notes': null,
+        'notes': notes,
         'association': association,
         'partySize' : partySize,
         'id': id
@@ -207,13 +204,13 @@ var showDataFor = function (id) {
 
         $('#id').val(foundElem.id);
         $('#firstName').val(foundElem.firstName);
-        $('#lastName').val(foundElem.lastName);
+        //$('#lastName').val(foundElem.lastName);
         $('#email').val(foundElem.email);
         $('#contact').val(foundElem.phoneNumber);
         //$('#address').val(foundElem.address);
 
 
-        $('#attendings').val(foundElem.statusId ==1? "Yes":"No");
+        //$('#attendings').val(foundElem.statusId ==1? "Yes":"No");
 
         //populateMealDropdownFromAllMeals("#menuSel");
 
@@ -223,7 +220,7 @@ var showDataFor = function (id) {
 
         //$('#menuSel').val(foundElem.mealId);
         $('#partySize').val(foundElem.partySize);
-      // $('#notes').val(foundElem.notes);
+       $('#notes').val(foundElem.notes);
 
     }
 };

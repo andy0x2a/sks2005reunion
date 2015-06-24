@@ -18,22 +18,11 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+              
                 <a class="navbar-brand" href="/">SKSS Grad 2005 Reunion</a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="rsvp.html">RSVP</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-
-
+             
             </div>
         </div>
     </div>
@@ -144,12 +133,11 @@
                     <thead>
                         <tr>
                             <th>id</th>
-                            <th>first Name</th>
-                            <th>Last Name</th>
-                            <th>phone Number</th>
+                            <th>Name</th>
+                            <th>Phone </th>
                             <th>Email</th>
-                            <th>Attending</th>
-                            <th>Bringing Guest</th>
+                            <th>Tickets</th>
+                            <th>Guest</th>
                             <th>Edit</th>
                         </tr>
                     </thead>
@@ -175,21 +163,14 @@
 
 
                         <div class="col-sm-9 myInput ">
-                            <label for="firstName">First Name:</label>
+                            <label for="firstName">Name:</label>
                             <input id="firstName" class="Input" type="text" name="firstName" autocorrect="off"
                                    autocapitalize="off"
-                                   placeholder="First Name" />
+                                   placeholder="Name" />
                         </div>
 
 
-                        <div class="col-sm-9 myInput">
-                            <label for="lastName">Last Name:</label>
-                            <input id="lastName" class="Input" type="text" name="lastName" autocorrect="off"
-                                   autocapitalize="off"
-                                   placeholder="Last Name" />
-                        </div>
-
-
+                      
                         <div class="col-sm-9 myInput">
                             <label for="contact">Phone #:</label>
                             <input id="contact" class="Input" type="text" name="contact" autocorrect="off"
@@ -198,19 +179,6 @@
                         </div>
 
 
-                        <!--<div class="col-sm-9 myInput">
-                                    <label for="address">Address:</label>
-                        <textarea id="address" class="form-control" rows="3" name="address" autocorrect="off"
-                                  autocapitalize="off"
-                                  placeholder="Address"> </textarea>
-                                </div>-->
-                        <div class="col-sm-9 myInput">
-                            <label for="notes">Location:</label>
-                            <input id="notes" class="Input" type="text" name="contact" autocorrect="off"
-                                   autocapitalize="off"
-                                   placeholder="Location" />
-                        </div>
-
 
                         <div class="col-sm-9 myInput">
                             <label for="email">Email:</label>
@@ -218,52 +186,25 @@
                                    autocapitalize="off"
                                    placeholder="Email" />
                         </div>
-                        <!--<div class="col-sm-9 myInput">
-                            <label for="association">Guest of:</label>
-
-                            <div class="btn-group" id="associations" role="group" aria-label="...">
-
-                                <select class="form-control" id="association">
-                                    <option id="brideAssoc" val="bride">Bride</option>
-                                    <option id="bothAsssoc" val="both">Both</option>
-                                    <option id="groomAssoc" val="groom">Groom</option>
-                                </select>
-                            </div>
-
-                        </div>-->
-
-
-                        <div class="col-sm-9 myInput">
-                            <div class="form-group">
-                                <div class="col-sm-9 myInput">
-                                    <label for="attendings">Attending:</label>
-                                    <select class="form-control" id="attendings">
-                                        <option id="yes" val="yes">Yes</option>
-                                        <option id="no" val="no">No</option>
-                                    </select>
-
-
-                                </div>
-                                <!--<label for="menuSel">Menu:</label>
-                                <select class="form-control" id="menuSel">
-                                </select>-->
-                            </div>
-                        </div>
-
+                      
 
 
 
                         <div class="col-sm-9 myInput">
-                            <label for="partySize">Bringing Guest:</label>
+                            <label for="partySize">Number of Tickets</label>
                             <input id="partySize" class="Input" type="text" name="partySize" autocorrect="off"
                                    autocapitalize="off"
                                    placeholder="false" />
                         </div>
 
+                        <div class="col-sm-9 myInput">
+                            <label for="notes">Guest Name:</label>
+                            <input id="notes" class="Input" type="text" name="notes" autocorrect="off"
+                                   autocapitalize="off"
+                                   placeholder="Guest Name" />
+                        </div>
 
-
-
-
+                        
                         <div class="col-sm-9 myInput error">
                             <h2> Please fill out the entire form</h2>
                         </div>
