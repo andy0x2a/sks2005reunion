@@ -176,7 +176,7 @@
 
     <script src="/js/vendor/jquery.spin.js"></script>
         <script src="js/rest.js"></script>
-        <script src="js/skss.js?v=1"></script>
+        <script src="js/skss.js?v=2"></script>
         <script>
             FEATURE_VALIDATE = true;
             $(document).ready(function () {
@@ -211,7 +211,8 @@
 
                 $("#submit_first").on('click', function (e) {
                     //remember to pass through
-                      $('.pp').spin(true);
+                      $('#thanks').spin(true);
+                      $("#submit_first").hide();
                     processForm(e);
                     
                 })

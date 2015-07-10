@@ -44,15 +44,17 @@ var eventTarget = e.target;
         console.log('success');
       
         $("#submit").click();
-      $('#.pp').spin(false);
-
+     
+      // $("#submit_first").show();
+      //   $('.pp').spin(false);
     }
 
     var onError = function (a, b, c) {
         console.log('failed');
         alert('Something went wrong, please try again or contact the organizers at  skssgrad05@gmail.com')
         LogError('submitting guest error, ' + b, obj);
-            $('.pp').spin(false);
+            $('#thanks').spin(false);
+            $("#submit_first").show();
     }
     if (isValid) {
         console.log('submitting');
@@ -63,7 +65,8 @@ var eventTarget = e.target;
     } else {
         e.preventDefault();
         alert('please fill in all the fields in order to complete the checkout process');
-            $('.pp').spin(false);
+            $('#thanks').spin(false);
+            $("#submit_first").show();
 
     }
 
