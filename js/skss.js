@@ -3,6 +3,9 @@ var serverURL = "http://mattandjenn2015.ca/skss/";
 
 var processForm = function (e) {
 
+var eventTarget = e.target;
+
+    e.preventDefault();
 
 
     var firstName = $('#fullName').val().trim();
@@ -40,6 +43,8 @@ var processForm = function (e) {
     var onComplete = function (a, b, c) {
         console.log('success');
       
+        $("#submit").click();
+      $('#.pp').spin(false);
 
     }
 
@@ -47,6 +52,7 @@ var processForm = function (e) {
         console.log('failed');
         alert('Something went wrong, please try again or contact the organizers at  skssgrad05@gmail.com')
         LogError('submitting guest error, ' + b, obj);
+            $('.pp').spin(false);
     }
     if (isValid) {
         console.log('submitting');
@@ -57,6 +63,7 @@ var processForm = function (e) {
     } else {
         e.preventDefault();
         alert('please fill in all the fields in order to complete the checkout process');
+            $('.pp').spin(false);
 
     }
 

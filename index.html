@@ -9,7 +9,18 @@
     <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-theme.min.css">
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+<script type="text/javascript">
+    if(navigator.appName.indexOf("Internet Explorer")!=-1){     //yeah, he's using IE
+    var badBrowser=(
+        navigator.appVersion.indexOf("MSIE 9")==-1//v9 is ok
+        
+    );
 
+    // if(badBrowser){
+    //     // navigate to error page
+    // }
+}
+</script>
 </head>
 <body>
 
@@ -138,19 +149,34 @@
 ">
                     <input type="hidden" name="quantity" value="1">
 
-                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" id="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <!-- <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" id="submit" alt="PayPal - The safer, easier way to pay online!">
+                     -->
+                     <div style="display:none">
+
+                     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" id="submit" alt="PayPal - The safer, easier way to pay online!">
+                     </div>
+
+                       <img  class="subf" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit_first" id="submit_first" alt="PayPal - The safer, easier way to pay online!" />
+                     
                     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                   
                 </form>
 
 
 
         </div>
-
+ <div>
+                    <br>
+                    <span> Tickets sales are final. Unfortunately because this is a small event, run by SKSS grads, we cannot offer refunds for event ticket.</span>
+                    </div>
         </div>
         <script src="/js/vendor/jquery-2.1.3.min.js"></script>
         <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/js/vendor/spin.js"></script>
+
+    <script src="/js/vendor/jquery.spin.js"></script>
         <script src="js/rest.js"></script>
-        <script src="js/skss.js"></script>
+        <script src="js/skss.js?v=1"></script>
         <script>
             FEATURE_VALIDATE = true;
             $(document).ready(function () {
@@ -183,8 +209,9 @@
                     $("input[name='quantity']").val(numTickets);
                 });
 
-                $("#submit").on('click', function (e) {
+                $("#submit_first").on('click', function (e) {
                     //remember to pass through
+                      $('.pp').spin(true);
                     processForm(e);
                     
                 })
